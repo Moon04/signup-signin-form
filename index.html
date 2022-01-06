@@ -20,10 +20,14 @@
             <div class="input-block">
               <label for="signin-email">E-mail</label>
               <input id="signin-email" name="SignInEmail" type="email" required />
+              <img src="./icons/error.svg" class="error-icon" alt="Error Icon">
+              <p class="error-text">Invalid Email Pattern.</p>              
             </div>
             <div class="input-block">
               <label for="signin-password">Password</label>
               <input id="signin-password" name="SignInPassword" type="password" required />
+              <img src="./icons/error.svg" class="error-icon" alt="Error Icon">
+              <p class="error-text">Password should contain letters, numbers, and special characters.</p>              
             </div>
           </fieldset>
           <button type="submit" name="signin" class="btn-signin">Sign In</button>
@@ -44,6 +48,8 @@
             <div class="input-block">
               <label for="signup-email">E-mail</label>
               <input id="signup-email" name="Email" type="email" required />
+              <img src="./icons/error.svg" class="error-icon" alt="Error Icon">
+              <p class="error-text">Invalid Email Pattern.</p>              
             </div>
             <div class="input-block">
               <label for="signup-username">Username</label>
@@ -52,6 +58,8 @@
             <div class="input-block">
               <label for="signup-password">Password</label>
               <input id="signup-password" name="Password" type="password" required />
+              <img src="./icons/error.svg" class="error-icon" alt="Error Icon">
+              <p class="error-text">Password should contain letters, numbers, and special characters.</p>              
             </div>
           </fieldset>
           <button type="submit" name="signup" class="btn-signup">Sign Up</button>
@@ -60,6 +68,7 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script src="main.js"></script>
+  <script src="validation.js"></script>
 </body>
 </html>

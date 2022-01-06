@@ -249,6 +249,7 @@ body {
 
 .input-block {
 	margin-bottom: 20px;
+	position: relative;
 }
 
 .input-block label {
@@ -269,6 +270,33 @@ body {
   border: 1px solid var(--pattens-blue);
   border-radius: 2px;
 	outline: none;
+}
+
+.error-icon,
+.error-text {
+	display: none;
+}
+
+.error-text {
+	text-align: right;
+	bottom: 0;
+	right: 0;
+	font-size: .8rem;
+	font-style: italic;
+	color: hsl(0, 100%, 74%);
+	font-weight: 500;
+}
+.error-icon {
+	position: absolute;
+	top: 37px;
+	right: 10px;
+}
+.input-block.error .error-text,
+.input-block.error .error-icon {
+	display: block;
+}
+.input-block.error input {
+	border: 2px solid hsl(0, 100%, 74%);
 }
 
 .form [type='submit'] {
