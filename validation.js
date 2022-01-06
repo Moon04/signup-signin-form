@@ -17,18 +17,30 @@ function hideError(input) {
 }
 
 function validateForm(inputs) {
+	let isValid = true;
 	inputs.forEach((input) => {
-		if (!input.value) showError(input);
+		if (!input.value) {
+			showError(input);
+			isValid = false;
+		}
 		else {
 			hideError(input);
 			if (input.type === "email") {
 				if (validateEmail(input.value)) hideError(input);
-				else showError(input);
+				else {
+					showError(input);
+					isValid = false;
+				}
 			}
       else if (input.type === "password") {
 				if (validatePassword(input.value)) hideError(input);
-				else showError(input);
+				else {
+					showError(input);
+					isValid = false;
+				}
 			}
 		}
 	});
+
+	return isValid;
 }

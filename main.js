@@ -14,11 +14,15 @@ const signInForm = document.getElementById("signin");
 signUpForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const inputs = document.querySelectorAll("#signup input");
-	validateForm(inputs);
+	const isValidData = validateForm(inputs);
+
+	if (isValidData) signUp(signUpForm);
 });
 
 signInForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const inputs = document.querySelectorAll("#signin input");
-	validateForm(inputs);
+	const isValidData = validateForm(inputs);
+
+	if (isValidData) signIn(signInForm);
 });
