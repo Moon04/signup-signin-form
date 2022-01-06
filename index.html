@@ -7,57 +7,59 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="forms-section">
-      <div class="forms">
-        <div class="form-wrapper">
-          <button type="button" class="tab tab-signin">
-            Sign In
-            <span class="underline"></span>
-          </button>
-          <form id="signin" class="form form-signin" onsubmit="return false">
-            <fieldset>
-              <legend>Please, enter your email and password for sign in.</legend>
-              <div class="input-block">
-                <label for="signin-email">E-mail</label>
-                <input id="signin-email" name="SignInEmail" type="email" required />
-              </div>
-              <div class="input-block">
-                <label for="signin-password">Password</label>
-                <input id="signin-password" name="SignInPassword" type="password" required />
-              </div>
-            </fieldset>
-            <button type="submit" name="signin" class="btn-signin">Sign In</button>
-          </form>
-        </div>
-        <div class="form-wrapper is-active">
-          <button type="button" class="tab tab-signup">
-            Sign Up
-            <span class="underline"></span>
-          </button>
-          <form id="signup" class="form form-signup" onsubmit="return false">
-            <fieldset>
-              <legend>Please, enter your full name, email, username and password for sign up.</legend>
-              <div class="input-block">
-                <label for="signup-fullname">Full Name</label>
-                <input id="signup-fullname" name="FullName" type="text" required />
-              </div>
-              <div class="input-block">
-                <label for="signup-email">E-mail</label>
-                <input id="signup-email" name="Email" type="email" required />
-              </div>
-              <div class="input-block">
-                <label for="signup-username">Username</label>
-                <input id="signup-username" name="Username" type="text" required />
-              </div>
-              <div class="input-block">
-                <label for="signup-password">Password</label>
-                <input id="signup-password" name="Password" type="password" required />
-              </div>
-            </fieldset>
-            <button type="submit" name="signup" class="btn-signup">Sign Up</button>
-          </form>
-        </div>
+  <section class="forms-section">
+    <div class="forms">
+      <div class="form-wrapper">
+        <button type="button" class="tab tab-signin">
+          Sign In
+          <span class="underline"></span>
+        </button>
+        <form id="signin" class="form form-signin" onsubmit="return false">
+          <fieldset>
+            <legend>Please, enter your email and password for sign in.</legend>
+            <div class="input-block">
+              <label for="signin-email">E-mail</label>
+              <input id="signin-email" name="SignInEmail" type="email" required />
+            </div>
+            <div class="input-block">
+              <label for="signin-password">Password</label>
+              <input id="signin-password" name="SignInPassword" type="password" required />
+            </div>
+          </fieldset>
+          <button type="submit" name="signin" class="btn-signin">Sign In</button>
+        </form>
       </div>
-    </section>
+      <div class="form-wrapper is-active">
+        <button type="button" class="tab tab-signup">
+          Sign Up
+          <span class="underline"></span>
+        </button>
+        <form id="signup" class="form form-signup" onsubmit="return false">
+          <fieldset>
+            <legend>Please, enter your full name, email, username and password for sign up.</legend>
+            <div class="input-block">
+              <label for="signup-fullname">Full Name</label>
+              <input id="signup-fullname" name="FullName" type="text" required />
+            </div>
+            <div class="input-block">
+              <label for="signup-email">E-mail</label>
+              <input id="signup-email" name="Email" type="email" required />
+            </div>
+            <div class="input-block">
+              <label for="signup-username">Username</label>
+              <input id="signup-username" name="Username" type="text" required />
+            </div>
+            <div class="input-block">
+              <label for="signup-password">Password</label>
+              <input id="signup-password" name="Password" type="password" required />
+            </div>
+          </fieldset>
+          <button type="submit" name="signup" class="btn-signup">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
