@@ -13,6 +13,8 @@
 	--midnight: #222e40;
 	--blue-charcoal: #2a2e36;
 	--black: #060606;
+	--danger: #f44336;
+	--success: #04AA6D;
 }
 
 *,
@@ -27,11 +29,48 @@ body {
   background: var(--black);
 }
 
+.d-none {
+	display: none;
+}
+
+.alert {
+	width: 30%;
+  padding: 20px;
+	right: 0;
+	top: 45px;
+	position: absolute;
+  color: var(--white);
+}
+
+.alert-danger {
+  background-color: var(--danger);
+}
+
+.alert-success {
+  background-color: var(--success);
+}
+
+.alert-close {
+  margin-left: 15px;
+  color: var(--white);
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alert-close:hover {
+  color: var(--black);
+}
+
 .forms-section {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin: 150px 0px;
 }
 
 .section-title {

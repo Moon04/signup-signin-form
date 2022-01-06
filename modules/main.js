@@ -26,3 +26,13 @@ signInForm.addEventListener("submit", (e) => {
 
 	if (isValidData) signIn(signInForm);
 });
+
+function showAlert(type, message) {
+  const alertText = document.getElementsByClassName("alert-text")[0];
+
+  alertText.innerHTML = message;
+  alertText.parentElement.classList.add(`alert-${type}`);
+  alertText.parentElement.classList.remove("d-none");
+
+  setTimeout(function(){ alertText.parentElement.classList.add("d-none"); }, 3000);
+}

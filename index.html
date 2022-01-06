@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="alert d-none">
+    <span class="alert-close" onclick="this.parentElement.classList.add('d-none');">&times;</span>
+    <span class="alert-text"></span>
+  </div>
   <section class="forms-section">
     <div class="forms">
       <div class="form-wrapper">
@@ -68,8 +72,8 @@
     </div>
   </section>
 
-  <script src="main.js"></script>
-  <script src="validation.js"></script>
-  <script src="apiService.js"></script>
+  <script src="./modules/main.js"></script>
+  <script src="./modules/validation.js"></script>
+  <script src="./modules/apiService.js"></script>
 </body>
 </html>
