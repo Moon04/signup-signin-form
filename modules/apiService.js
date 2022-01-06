@@ -9,10 +9,14 @@ function createAPIRequest(url, body) {
   
   xmlRequest.onreadystatechange = function () {
     const { readyState, status, response } = this; 
-    const { message } = JSON.parse(response);
 
-    if (readyState === 4 && status === 200) showAlert("success", message);
-    else showAlert("danger", message);
+    if (readyState === 4) {
+      hideLoader();
+      
+      const { message }= JSON.parse(response);
+      if (status === 200) showAlert("success", message);
+      else showAlert("danger", message);
+    }
   }
 
   xmlRequest.send(JSON.stringify(body));

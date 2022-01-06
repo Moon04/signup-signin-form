@@ -358,7 +358,62 @@ body {
 
 .btn-signin,
 .btn-signup {
+	cursor: pointer;
 	color: var(--alice-blue-1);
   background: linear-gradient(180deg, var(--downy) 0%, var(--viking-2) 100%);
 	transform: translateX(-30%);
+}
+
+.loader-container {
+	top: 0;
+	z-index: 999;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--black);
+	opacity: 0.7;
+}
+
+.loader{
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	width: 40%;
+	height: 40%;
+}
+
+.loader::before,
+.loader::after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+	height: 100%;
+	border: 5px solid var(--downy);
+	border-radius: 50%;
+	animation: animate 2s infinite linear;
+}
+
+.loader::before{
+	animation-delay: 0s;
+}
+
+.loader::after{
+	animation-delay: 1s;
+}
+
+@keyframes animate{
+	0%{
+		width: 0;   
+		height: 0;
+		opacity: 1;
+	}
+	100%{
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+	}
 }

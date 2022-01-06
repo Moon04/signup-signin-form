@@ -1,4 +1,5 @@
 const tabs = [...document.querySelectorAll(".tab")];
+const loader = document.getElementsByClassName("loader-container")[0];
 
 tabs.forEach(item => {
 	item.addEventListener("click", function() {
@@ -7,16 +8,26 @@ tabs.forEach(item => {
 	})
 });
 
+function showLoader() {
+	loader.classList.remove("d-none");
+}
+
+function hideLoader() {
+	loader.classList.add("d-none");
+}
+
 const signUpForm = document.getElementById("signup");
 const signInForm = document.getElementById("signin");
-
 
 signUpForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const inputs = document.querySelectorAll("#signup input");
 	const isValidData = validateForm(inputs);
 
-	if (isValidData) signUp(signUpForm);
+	if (isValidData) {
+		showLoader();
+		signUp(signUpForm);
+	}
 });
 
 signInForm.addEventListener("submit", (e) => {
@@ -24,7 +35,10 @@ signInForm.addEventListener("submit", (e) => {
 	const inputs = document.querySelectorAll("#signin input");
 	const isValidData = validateForm(inputs);
 
-	if (isValidData) signIn(signInForm);
+	if (isValidData) {
+		showLoader();
+		signIn(signInForm);
+	}
 });
 
 function showAlert(type, message) {
